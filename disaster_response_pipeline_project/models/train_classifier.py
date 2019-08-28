@@ -74,7 +74,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
     Outputs: a df containing F1 score, percison, recall for each class '''
     Y_prep = model.predict(X_test)
     report = []
-    for i in range(len(classes)):
+    for i in range(len(category_names)):
         precision,recall,fscore,support=score(Y_test[category_names[i]],Y_prep[:,i],average='macro')
         report.append([category_names[i],precision,recall,fscore])
     results = pd.DataFrame(report, columns =['Class','Precision','Recall','F score']).set_index('Class')
