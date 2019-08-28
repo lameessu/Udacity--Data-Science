@@ -16,7 +16,7 @@ from sklearn import metrics
 from nltk.stem import WordNetLemmatizer
 from sklearn.metrics import precision_recall_fscore_support as score
 from sklearn.model_selection import GridSearchCV
-
+from sklearn.externals import joblib
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 import nltk
 nltk.download('punkt')
