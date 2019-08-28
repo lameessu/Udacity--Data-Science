@@ -65,7 +65,8 @@ def index():
                 }
             }
         }
-                {
+        ,
+        {
             'data': [
                 Bar(
                     x=category_names,
@@ -74,15 +75,16 @@ def index():
             ],
 
             'layout': {
-                'title': 'Distribution of Message Categories',
+                'title': 'Distribution of Message Genres',
                 'yaxis': {
                     'title': "Count"
                 },
                 'xaxis': {
-                    'title': "Category"
+                    'title': "Genre"
                 }
             }
         }
+
     ]
     
     
