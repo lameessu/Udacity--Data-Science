@@ -51,7 +51,7 @@ def tokenize(text):
 
 def build_model():
     pipeline = Pipeline([
-    ('vectorizer', CountVectorizer()),
+    ('vectorizer', CountVectorizer(tokenize)),
     ('tfidf', TfidfTransformer()),
     ('clf', MultiOutputClassifier(OneVsRestClassifier(LinearSVC())))])
     parameters = {

@@ -26,11 +26,11 @@ def tokenize(text):
     return clean_tokens
 
 # load data
-engine = create_engine('sqlite:///etldb.db')
+engine = create_engine('sqlite:///../etldb.db')
 df = pd.read_sql_table('msg', engine)
 
 # load model
-model = joblib.load("model.pkl")
+model = joblib.load("../model.pkl")
 
 
 # index webpage displays cool visuals and receives user input text for model
@@ -115,7 +115,7 @@ def go():
 
 
 def main():
-    app.run(host='0.0.0.0', port=3001, debug=True)
+    app.run(host='0.0.0.0', port=3005, debug=True)
 
 
 if __name__ == '__main__':
